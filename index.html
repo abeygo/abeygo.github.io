@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html id="id_html">
+
+<head>
+  <meta charset="utf-8">
+  <title>Black Goose Bistro</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="configuration.js"></script>
+
+</head>
+
+<body id="id_body">
+  <header>
+    <img src="image/blackgoose.png" alt="logo" id="logo">
+    <br>
+
+    <h1>Bistro de l'Oie noire</h1>
+  </header>
+
+  <div id="corps">
+    <h2 id="h2_resto" onclick="">Le Restaurant</h2>
+    <p>Le <strong>Bistro de l'Oie noire</strong> propose des déjeuners et des dîners décontractés dans une atmosphère détendue. Le menu change régulièrement pour mettre en valeur les ingrédients locaux les plus frais.</p>
+
+    <p>Récompense de l'effort apporté à la qualité du service et de  la  cuisine, le restaurant est membre de la  prestigieuse <a href="https://restaurant.org/home">Association des restaurateurs</a>.</p>
+
+
+    <p>Le menu d'Octobre!</p>
+
+
+    <h2 id="h2_restauration" onclick="">Restauration</h2>  
+    <p> <em>Amusez-vous bien. Nous nous occuperons de la cuisine.</em> Le bistro peut organiser des événements allant du goûter pour une réunion à d'élégantes collectes de fonds pour des entreprises.</p>
+
+
+    <h2 id="h2_brigade" onclick="">Brigade</h2>
+
+    <table border="1">
+      <tr>
+        <td><span class="poste">Chef cuisinier</span></td>
+        <td>Luther V. Cronin</td>
+      </tr>
+      <tr>
+        <td rowspan="2"><span class="poste">Sous-chefs</span></td>
+        <td>Márton Vidor</td>
+      </tr>  
+      <tr>
+        <td>Lee Chi Ho (李志豪)</td>
+      </tr>           
+      <tr>
+        <td rowspan="3"><span class="poste">Chefs de partie</span></td>
+        <td>Kehla Starad</td>
+      </tr>  
+      <tr>
+        <td>Lưu Thi Bồng</td>
+      </tr> 
+      <tr>
+        <td>Sota Nakajima (中嶋 颯太)</td>
+      </tr>           
+    </table>
+
+
+    <h2 id="h2_lieu">Lieu et heures d'ouverture</h2>
+
+    <ol>
+      <li class="adresse">Seekonk, Massachusetts, USA</li>
+      <ul>
+        <li>Du lundi au jeudi, de 11h à 21h</li>
+        <li>vendredi et samedi, de 11h à minuit</li>
+      </ul>  
+      <li class="adresse">Time Square, New York cities, USA</li>
+      <ul>
+        <li>Du mardi au jeudi, de 11h à 21h</li>
+        <li>Vendredi et samedi, de 11h à minuit</li>
+        <li>Dimanche, brunch de 10h à 14h</li>    
+      </ul>    
+    </ol>
+
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.99180412292482%2C40.75101205089848%2C-73.98019552230836%2C40.763511227428154&amp;layer=mapnik&amp;marker=40.75726030463718%2C-73.9859942" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=40.7573&amp;mlon=-73.9860#map=16/40.7573/-73.9860">Afficher une carte plus grande</a></small>
+
+  </div>
+  <footer>
+    <hr>
+    Copyright &copy;2021 | Votre nom (Pour me contacter: <a href="mailto:me@gmail.com">m'écrire</a>) 
+    <br>
+    <a href="http://instagram.com/"><img src="image/instagram.svg" alt="instagram" class="social-network-logo"></a>
+    <a href="http://tripadvisor.com/"><img src="image/tripadvisor.svg" alt="tripadvisor" class="social-network-logo"></a>
+    <a href="http://twitter.com/"><img src="image/twitter.svg" alt="twitter" class="social-network-logo"></a>
+  </footer>
+
+  <hr>
+  <div id="config">
+
+    <h2 id="h2_config">Configuration du site</h2>
+    
+    <label for="idmarge" class="labconf">Choix de la marge</label> 
+    <input type="text" name="marge" id="idmarge"/>
+    <input type="button" class="butconf" id="idbutmarge" value="Changer marge" onclick="changeMarge()">
+    <br>
+    
+    <label for="idarrp" class="labconf">Choix de la couleur d'arrière plan (balise HTML)</label> 
+    <input type="color" name="arrp" id="idarrp"/>
+    <input type="button" name="butarrp" class="butconf" id="idbutarrp" value="Changer couleur" onclick="changeHtml(idarrp)">
+    <br>
+    
+    <label for="idcolbody" class="labconf">Choix de la couleur de fond (balise BODY)</label> 
+    <input type="color" name="marge" id="idcolbody" onchange="changeBody()"/>  
+    <br>
+
+    <label for="idbutelem" class="labconf">Nombre d'éléments dans le corps de la page:</label>
+    <input type="button" class="butconf" id="idbutelem" value="Statistiques" onclick="statPage()">
+    <br>
+
+    <label for="idelem;" class="labconf">Cacher/révéler tout sauf H2 dans le corps:</label>
+    <br>
+    <input type="button" class="butconf" id="idbutc" value="Cacher" onclick="cacher()">
+    <input type="button" class="butconf" id="idbutr" value="Révéler" onclick="reveler()">
+    <br>
+  </div>    
+</body>
+</html>
