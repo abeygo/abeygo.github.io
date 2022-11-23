@@ -33,7 +33,7 @@ tfoot {
     class Box extends HTMLElement {
         constructor() {
             super();
-            this._shadowRoot= this.attachShadow({mode: "open"});
+            let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(template.content.cloneNode(true));
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
@@ -41,7 +41,7 @@ tfoot {
             });
             this._props = {};
 	    this._lineas=5;
-	    this._tabla=this._shadowRoot.getElementById("tabla");
+	    this._tabla=shadowRoot.getElementById("tabla");
         }
 	otraLinea() {
 	    let linea=6;
