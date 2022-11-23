@@ -2,7 +2,7 @@
     let template = document.createElement("template");
     template.innerHTML = `
 <div>
-<table>
+<table id="tabla">
     <thead>
         <tr>
             <th colspan="2">The table header</th>
@@ -40,6 +40,10 @@
                 this.style["opacity"] = changedProperties["opacity"];
             }
         }
+	otraLinea (){
+	    let tabla = this._shadowRoot.getElementById("tabla");
+	    tabla.insertRow(6);
+	}
     }
     customElements.define("com-sample-box", Box);
 })();
