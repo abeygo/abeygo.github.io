@@ -1,16 +1,8 @@
 (function() {
     let template = document.createElement("template");
     template.innerHTML = `
-        <style>
-        :host {
-        border-radius: 25px;
-        border-width: 4px;
-        border-color: black;
-        border-style: solid;
-        display: block;
-        }
-        </style>
-        <table>
+<div>
+<table>
                 <thead>
                 <tr>
                     <th>name</th>
@@ -30,7 +22,8 @@
                     <td>Parco Foreste Casentinesi</td>
                 </tr>
                 </tbody>
-            </table>
+</table>
+</div>
 		
     `;
     class Box extends HTMLElement {
