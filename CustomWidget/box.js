@@ -16,6 +16,11 @@
     </tbody>
 </table>
 </div>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
 		
     `;
     class Box extends HTMLElement {
