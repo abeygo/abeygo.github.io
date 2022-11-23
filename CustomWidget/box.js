@@ -2,7 +2,7 @@
     let template = document.createElement("template");
     template.innerHTML = `
 <div>
-<table id="tabla">
+<table>
     <thead>
         <tr>
             <th colspan="2">The table header</th>
@@ -40,13 +40,7 @@ tfoot {
                 this.dispatchEvent(event);
             });
             this._props = {};
-	    this._lineas=5;
-	    this._tabla=shadowRoot.getElementById("tabla");
         }
-	otraLinea() {
-	    let linea=6;
-            this._tabla.insertRow(linea);
-            }
         onCustomWidgetBeforeUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
         }
