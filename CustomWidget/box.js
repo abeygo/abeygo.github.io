@@ -17,7 +17,7 @@
 </table>
 </div>
 <style>
-table, td {
+table, td, tr {
   border: 1px solid black;
 }
 </style>
