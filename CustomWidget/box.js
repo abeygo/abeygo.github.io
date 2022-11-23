@@ -16,18 +16,6 @@
     </tbody>
 </table>
 </div>
-<style>
-table,
-td {
-    border: 1px solid #333;
-}
-
-thead,
-tfoot {
-    background-color: #333;
-    color: #fff;
-}
-</style>
 		
     `;
     class Box extends HTMLElement {
