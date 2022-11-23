@@ -44,7 +44,7 @@ tfoot {
 	    this._tabla=this._shadowRoot.getElementById("tabla");
         }
 	otraLinea() {
-	    let linea= this._lineas + 1;
+	    let linea=6;
             this._tabla.insertRow(linea);
             }
         onCustomWidgetBeforeUpdate(changedProperties) {
