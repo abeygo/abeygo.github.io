@@ -46,7 +46,6 @@ tfoot {
 	otraLinea() {
 	    let linea= this._lineas + 1;
             this._tabla.insertRow(linea);
-            
             }
         onCustomWidgetBeforeUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
