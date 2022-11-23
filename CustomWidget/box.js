@@ -3,25 +3,17 @@
     template.innerHTML = `
 <div>
 <table>
-                <thead>
-                <tr>
-                    <th>name</th>
-                    <th>height</th>
-                    <th>place</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Monte Falco</td>
-                    <td>1658</td>
-                    <td>Parco Foreste Casentinesi</td>
-                </tr>
-                <tr>
-                    <td>Monte Falterona</td>
-                    <td>1654</td>
-                    <td>Parco Foreste Casentinesi</td>
-                </tr>
-                </tbody>
+    <thead>
+        <tr>
+            <th colspan="2">The table header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+        </tr>
+    </tbody>
 </table>
 </div>
 		
