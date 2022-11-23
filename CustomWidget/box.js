@@ -94,8 +94,8 @@ table, td, tr {
 	    tabla.insertRow();
 	}
 	otroHeader (){
-		let tr = this._shadowRoot.getElementById('tabla').tHead.children[0],
-    		th = this._shadowRoot.createElement('th');
+		let tr = this._shadowRoot.getElementById('tabla').tHead;
+    		let th = this._shadowRoot.createElement('th');
 		th.innerHTML = "Second";
 		tr.appendChild(th);
 	}
