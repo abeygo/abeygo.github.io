@@ -46,8 +46,8 @@ table, td {
             }
         }
 	otraLinea (){
-	    let tabla = this._shadowRoot.getElementById("tabla");
-	    tabla.insertRow(6);
+	    let tabla = this._shadowRoot.getElementById("tabla").getElementsByTagName("tbody")[0];
+	    tabla.insertRow();
 	}
     }
     customElements.define("com-sample-box", Box);
