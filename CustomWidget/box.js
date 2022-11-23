@@ -21,8 +21,8 @@
     class Box extends HTMLElement {
         constructor() {
             super();
-            let shadowRoot = this.attachShadow({mode: "open"});
-            shadowRoot.appendChild(template.content.cloneNode(true));
+            this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(template.content.cloneNode(true));
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
