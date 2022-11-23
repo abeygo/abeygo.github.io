@@ -2,7 +2,7 @@
     let template = document.createElement("template");
     template.innerHTML = `
 <div>
-<table>
+<table id="tabla">
     <thead>
         <tr>
             <th colspan="2">The table header</th>
@@ -33,14 +33,21 @@ tfoot {
     class Box extends HTMLElement {
         constructor() {
             super();
-            let shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot= this.attachShadow({mode: "open"});
             shadowRoot.appendChild(template.content.cloneNode(true));
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
             });
             this._props = {};
+	    this._lineas=5;
+	    this._tabla=this._shadowRoot.getElementById("tabla");
         }
+	otraLinea() {
+	    let linea= this._lineas + 1;
+            this._tabla.insertRow(linea);
+            
+            }
         onCustomWidgetBeforeUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
         }
