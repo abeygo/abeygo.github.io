@@ -94,8 +94,10 @@ table, td, tr {
 	    tabla.insertRow();
 	}
 	otroHeader (){
-	    let tabla = this._shadowRoot.getElementById("tabla").getElementsByTagName("thead")[0];
-	    tabla.insertCell();
+		let tr = this._shadowRoot.getElementById('tabla').tHead.children[0],
+    		th = this._shadowRoot.createElement('th');
+		th.innerHTML = "Second";
+		tr.appendChild(th);
 	}
     }
     customElements.define("com-sample-box", Box);
