@@ -95,7 +95,7 @@ table, td, tr {
 	}
 	otroHeader (){
 		let tr = this._shadowRoot.getElementById('tabla').tHead;
-    		let th = this._shadowRoot.createElement('th');
+    		let th = document.createElement('th');
 		th.innerHTML = "Second";
 		tr.appendChild(th);
 	}
