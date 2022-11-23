@@ -37,7 +37,7 @@ table, td, tr {
             }
         }
 	otraLinea (){
-	    let tabla = this._shadowRoot.getElementById("tabla").getElementsByTagName("tbody")[0];
+	    let tabla = this._shadowRoot.getElementById("tabla");
 	    tabla.insertRow();
 	}
 	generateTableHead(tabla) {
