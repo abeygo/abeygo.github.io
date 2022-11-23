@@ -49,6 +49,10 @@ table, td, tr {
 	    let tabla = this._shadowRoot.getElementById("tabla").getElementsByTagName("tbody")[0];
 	    tabla.insertRow();
 	}
+	otroHeader (){
+	    let tabla = this._shadowRoot.getElementById("tabla").getElementsByTagName("thead")[0];
+	    tabla.insertCell();
+	}
     }
     customElements.define("com-sample-box", Box);
 })();
