@@ -39,10 +39,13 @@ table, td, tr {
 	otraLinea (){
 	    let tabla = this._shadowRoot.getElementById("tabla");
 	    tabla.insertRow();
+	    tabla.insertRow();
+	    tabla.insertRow();
+        
 	}
 	generateTableHead(tabla) {
   	    let thead = table.createTHead();
-            let row = thead.insertRow();
+        let row = thead.insertRow();
 	}
     }
     customElements.define("com-sample-box", Box);
