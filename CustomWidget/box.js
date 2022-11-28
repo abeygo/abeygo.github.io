@@ -13,10 +13,17 @@
 </table>
 </div>
 <style>
-table, td, tr {
+table {
   border: 1px solid black;
   background-color:blue;
 }
+tr {
+    border: 1px solid black;
+    background-color:blue;
+    width:30px
+    height:10px
+  }
+
 </style>
 		
     `;
