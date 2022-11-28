@@ -17,7 +17,7 @@ table {
   border: 1px solid black;
   background-color:blue;
 }
-tr {
+th, td {
     border: 1px solid black;
     background-color:blue;
     width:30px
