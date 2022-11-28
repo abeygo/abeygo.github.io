@@ -44,7 +44,7 @@ table, td, tr {
         }
         otraLinea() {
             let tabla = this._shadowRoot.getElementById("tabla");
-            row=tabla.insertRow();
+            let row=tabla.insertRow();
                 for (let i=0;i<6;i++) {
                     row.insertCell(i)
                 }
