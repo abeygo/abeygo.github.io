@@ -51,7 +51,7 @@ th, td {
         }
         otraLinea(length,comment) {
             let tabla = this._shadowRoot.getElementById("tabla");
-            for (j = 0;j<length; j++) {
+            for (let j = 0;j<length; j++) {
                 let row = tabla.insertRow();
                 for (let i = 0; i < 6; i++) {
                     row.insertCell(i)
