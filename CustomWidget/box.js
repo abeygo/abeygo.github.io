@@ -49,7 +49,7 @@ th, td {
                 this.style["opacity"] = changedProperties["opacity"];
             }
         }
-        newCell(rowIndex) {
+        newCell() {
             let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].insertCell();
         }
         newHeader() {
