@@ -52,7 +52,8 @@ th, td {
             }
         }
         newCell(rowIndex) {
-            this._shadowRoot.getElementById("tabla").rows[rowIndex].insertCell;
+            this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell;
+            
         }
         
         newRow() {
@@ -64,7 +65,7 @@ th, td {
             console.log(tableRow);
                 }
         setCellText(rowIndex,cellIndex, text) {
-                this._shadowRoot.getElementById("tabla").rows[rowIndex].cells[cellIndex].innerHTML=text;
+                this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("tr")[cellIndex].innerHTML=text;
                     
                 }
 
