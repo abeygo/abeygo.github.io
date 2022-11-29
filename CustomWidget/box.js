@@ -70,7 +70,8 @@ th, td {
                 let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("tr")[cellIndex];
                 let innertext=text
                 console.log(innertext);
-                console.log(cell);                    
+                console.log(cell);   
+                cell.innerHTML=innertext                 
                 }
 
     }
