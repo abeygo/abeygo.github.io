@@ -67,8 +67,9 @@ th, td {
             let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
             let row = this._shadowRoot.getElementById("tabla").insertRow();
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
-            
-            for (let i = 0; i < endcell.length; i++) {
+            console.log(endcell);
+
+            for (let i = 0; i < endcell; i++) {
                 let lastrow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows-1]
                 let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[lastrow].insertCell();
             }
