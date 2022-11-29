@@ -67,12 +67,11 @@ th, td {
             
             console.log(endcell);
             let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
-            let lastrow = totalRows-1
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
 
             for (let i = 0; i < endcell-1; i++) {
                 
-                let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[lastrow].insertCell();
+                let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows].insertCell();
             }
         }
         selectRow(index) {
