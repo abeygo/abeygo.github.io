@@ -63,9 +63,11 @@ th, td {
         }
 
         newRow() {
-            let tabla = this._shadowRoot.getElementById("tabla");
+            
+            let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
-            let row = tabla.insertRow();
+            let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows-1].insertRow();
+            
             for (let i = 0; i < endcell.length; i++) {
                 let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[endcell].insertCell();
             }
