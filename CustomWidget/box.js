@@ -74,7 +74,7 @@ th, td {
             var row = table.insertRow(-1);
             for (var i = 0; i < columnCount; i++) {
                 var headerCell = document.createElement("th");
-                headerCell.innerHTML = customers[0][i];
+                headerCell.innerHTML = arrayTable[0][i];
                 row.appendChild(headerCell);
             }
      
