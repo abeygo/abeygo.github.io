@@ -62,7 +62,7 @@ th, td {
         newRow() {
             
             
-            console.log("totalrows" + totalRows);
+            
             let row = this._shadowRoot.getElementById("tabla").insertRow();
             
             console.log(endcell);
