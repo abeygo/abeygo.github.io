@@ -64,12 +64,13 @@ th, td {
             
             console.log("totalrows" + totalRows);
             let row = this._shadowRoot.getElementById("tabla").insertRow();
-            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
+            
             console.log(endcell);
             let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
             let lastrow = totalRows-1
+            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
 
-            for (let i = 0; i < endcell; i++) {
+            for (let i = 0; i < endcell-1; i++) {
                 
                 let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[lastrow].insertCell();
             }
