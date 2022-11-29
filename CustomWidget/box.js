@@ -50,10 +50,12 @@ th, td {
             }
         }
         newCell(rowIndex) {
+            let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
             console.log(endcell);
+            for(let i=0;i<endcell.length; i++){
             let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell();
-
+                }
         }
         newHeader() {
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
@@ -64,7 +66,10 @@ th, td {
 
         newRow() {
             let tabla = this._shadowRoot.getElementById("tabla");
+            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
             let row = tabla.insertRow();
+            for(let i=0;i<endcell.length; i++){
+                let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[endcell].insertCell();
         }
         selectRow(index) {
             let tableRow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[index];
