@@ -54,7 +54,7 @@ th, td {
         newCell(rowIndex) {
             let endcell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
             console.log(endcell);
-            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell((endcell/2)-1);
+            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell(endcell/2);
             
         }
         
@@ -70,7 +70,7 @@ th, td {
                 let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("tr")[cellIndex];
                 let innertext=text
                 console.log(innertext);
-                    
+                console.log(cell);                    
                 }
 
     }
