@@ -1,4 +1,4 @@
-(function () {
+(function () {             
     let template = document.createElement("template");
     template.innerHTML = `
 <div id="main">
@@ -60,17 +60,14 @@ th, td {
         }
 
         newRow() {
-            
-            
-            
-            let row = this._shadowRoot.getElementById("tabla").insertRow();
-            
-            
+
+
             let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
+            let row = this._shadowRoot.getElementById("tabla").insertRow();
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
 
-            for (let i = 0; i < endcell-1; i++) {
-                
+            for (let i = 0; i < endcell - 1; i++) {
+
                 let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows].insertCell();
             }
         }
