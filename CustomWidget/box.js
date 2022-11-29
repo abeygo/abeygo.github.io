@@ -77,7 +77,7 @@ th, td {
         }
         setCellText(rowIndex, cellIndex, text) {
             let cell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
-            cell.innerText = text
+            cell.innerHTML = text
             console.log(cell);
         }
         numberOfRows() {
