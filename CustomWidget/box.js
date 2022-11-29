@@ -5,10 +5,8 @@
 <table>
     <tbody id="tabla">
         <tr>
-            <th>Texte</th>
-            <th>Date de publication</th>
-            <th>Publié par</th>
-            <th>Date de publication</th>
+          
+        
         </tr>
     </tbody>
 
@@ -52,18 +50,18 @@ th, td {
             }
         }
         newCell(rowIndex) {
-            let endcell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
+            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
             console.log(endcell);
-            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell();
-            
+            let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell();
+
         }
         newHeader() {
-            let endcell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
+            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
             console.log(endcell);
-            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].createElement("th");
-            
+            let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].createElement("th");
+
         }
-        
+
         newRow() {
             let tabla = this._shadowRoot.getElementById("tabla");
             let row = tabla.insertRow();
@@ -71,16 +69,14 @@ th, td {
         selectRow(index) {
             let tableRow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[index];
             console.log(tableRow);
-                }
-        setCellText(rowIndex,cellIndex, text) {
-                let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
-                cell.innerText=text
-                console.log(innertext);
-                console.log(cell);   
-                //cell.innerHTML=innertext     //desactivado para ver si funciona mejor innertext            
-                }
-        numberOfRows(){
-            let row=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
+        }
+        setCellText(rowIndex, cellIndex, text) {
+            let cell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
+            cell.innerText = text
+            console.log(cell);
+        }
+        numberOfRows() {
+            let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
             console.log(row);
 
         }
