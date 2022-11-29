@@ -50,9 +50,6 @@ th, td {
             }
         }
         newCell(rowIndex) {
-            let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length
-            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
-            console.log(endcell);
             let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].insertCell();
         }
         newHeader() {
