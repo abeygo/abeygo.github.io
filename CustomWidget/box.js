@@ -51,18 +51,18 @@ th, td {
                 this.style["opacity"] = changedProperties["opacity"];
             }
         }
+        newCell(rowIndex) {
+            this._shadowRoot.getElementById("tabla").rows[rowIndex].insertCell;
+        }
+        
+        newRow() {
+            let tabla = this._shadowRoot.getElementById("tabla");
+            let row = tabla.insertRow();
+        }
         selectRow(index) {
             let tableRow = this._shadowRoot.getElementById("tabla").row.index(index);
             console.log(tableRow);
                 }
-            
-
-
-        
-        newRow() {
-            let tabla = this._shadowRoot.getElementById("tabla");
-                let row = tabla.insertRow();
-            }
         setCellText(rowIndex,cellIndex, text) {
                 this._shadowRoot.getElementById("tabla").rows[rowIndex].cells[cellIndex].innerHTML=text;
                     
