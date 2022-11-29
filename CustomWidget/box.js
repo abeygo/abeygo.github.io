@@ -67,7 +67,7 @@ th, td {
             console.log(tableRow);
                 }
         setCellText(rowIndex,cellIndex, text) {
-                let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("tr")[cellIndex];
+                let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
                 let innertext=text
                 console.log(innertext);
                 console.log(cell);   
