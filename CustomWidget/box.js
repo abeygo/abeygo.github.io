@@ -78,9 +78,9 @@ th, td {
             console.log(tableRow);
         }
         setCellText(rowIndex, cellIndex, text) {
-            var cell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
-            console.log(text);
-            
+            let cell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
+            cell.innerText = text
+            console.log(cell);
         }
         numberOfRows() {
             let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
