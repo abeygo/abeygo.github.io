@@ -54,7 +54,7 @@ th, td {
         newCell(rowIndex) {
             let endcell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
             console.log(endcell);
-            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell(endcell/2);
+            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell();
             
         }
         newHeader() {
@@ -74,10 +74,10 @@ th, td {
                 }
         setCellText(rowIndex,cellIndex, text) {
                 let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
-                let innertext=text
+                cell.innerText=text
                 console.log(innertext);
                 console.log(cell);   
-                cell.innerHTML=innertext                 
+                //cell.innerHTML=innertext     //desactivado para ver si funciona mejor innertext            
                 }
         numberOfRows(){
             let row=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
