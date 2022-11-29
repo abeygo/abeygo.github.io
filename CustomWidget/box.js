@@ -63,7 +63,7 @@ th, td {
 
         }
         generateTableHead() {
-            var x = document.getElementsByTagName("tr");
+            var x = this._shadowRoot.getElementsByTagName("tr");
             var txt = "";
             var i;
             for (i = 0; i < x.length; i++) {
