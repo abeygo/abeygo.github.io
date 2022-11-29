@@ -59,7 +59,7 @@ th, td {
             
 
 
-        }
+        
         generateTableHead() {
             var x = this._shadowRoot.getElementsByTagName("tr");
             var txt = "";
