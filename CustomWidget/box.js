@@ -63,35 +63,7 @@ th, td {
             let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].createElement("th");
             
         }
-        newTable(arrayTable){
-            var table = document.createElement("Table");
-            table.border = "1";
-     
-            //Get the count of columns.
-            var columnCount = arrayTable[0].length;
-     
-            //Add the header row.
-            var row = table.insertRow(-1);
-            for (var i = 0; i < columnCount; i++) {
-                var headerCell = document.createElement("th");
-                headerCell.innerHTML = arrayTable[0][i];
-                row.appendChild(headerCell);
-            }
-     
-            //Add the data rows.
-            for (var i = 1; i < arrayTable.length; i++) {
-                row = table.insertRow(-1);
-                for (var j = 0; j < columnCount; j++) {
-                    var cell = row.insertCell(-1);
-                    cell.innerHTML = arrayTable[i][j];
-                }
-            
-     
-            var dvTable = this._shadowRoot.getElementById("main");
-            dvTable.innerHTML = "";
-            dvTable.appendChild(table);
-        }
-        }
+        
         newRow() {
             let tabla = this._shadowRoot.getElementById("tabla");
             let row = tabla.insertRow();
@@ -101,13 +73,17 @@ th, td {
             console.log(tableRow);
                 }
         setCellText(rowIndex,cellIndex, text) {
-                let row=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
+                let cell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
                 let innertext=text
                 console.log(innertext);
                 console.log(cell);   
                 cell.innerHTML=innertext                 
                 }
-        numberOfRows(){}
+        numberOfRows(){
+            let row=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
+            console.log(row);
+
+        }
 
     }
     customElements.define("com-sample-box", Box);
