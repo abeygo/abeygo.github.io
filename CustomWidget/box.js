@@ -52,7 +52,9 @@ th, td {
             }
         }
         newCell(rowIndex) {
-            this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell;
+            let endcell=this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].childNodes.length;
+            console.log(endcell);
+            let newcell= this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].insertCell(endcell-1);
             
         }
         
