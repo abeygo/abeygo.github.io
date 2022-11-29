@@ -49,16 +49,14 @@ th, td {
                 this.style["opacity"] = changedProperties["opacity"];
             }
         }
-        otraLinea(length, comment) {
+        otraLinea(length, text) {
             let tabla = this._shadowRoot.getElementById("tabla");
-            for (let j = 0; j < length; j++) {
                 let row = tabla.insertRow();
-                for (let i = 0; i < 6; i++) {
-                    row.insertCell(i)
+                    row.insertCell(length)
                     let cell = row.childNodes[i]
-                    cell.innerHTML = comment
+                    cell.innerHTML = text
                 }
-            }
+            
 
 
         }
