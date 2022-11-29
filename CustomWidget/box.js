@@ -69,7 +69,7 @@ th, td {
             let row = this._shadowRoot.getElementById("tabla").insertRow();
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
             console.log(endcell);
-            let lastrow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows-1]
+            let lastrow = totalRows-1
 
             for (let i = 0; i < endcell; i++) {
                 
