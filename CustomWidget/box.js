@@ -61,7 +61,7 @@ th, td {
             let row = tabla.insertRow();
         }
         selectRow(index) {
-            let tableRow = this._shadowRoot.getElementById("tabla").row.index(index);
+            let tableRow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[index];
             console.log(tableRow);
                 }
         setCellText(rowIndex,cellIndex, text) {
