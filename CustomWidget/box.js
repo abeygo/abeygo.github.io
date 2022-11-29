@@ -65,11 +65,12 @@ th, td {
         newRow() {
             
             let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
+            let row = this._shadowRoot.getElementById("tabla").insertRow();
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
-            let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows-1].insertRow();
             
             for (let i = 0; i < endcell.length; i++) {
-                let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[endcell].insertCell();
+                let lastrow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows-1]
+                let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[lastrow].insertCell();
             }
         }
         selectRow(index) {
