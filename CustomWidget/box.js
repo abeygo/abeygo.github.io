@@ -65,7 +65,7 @@ th, td {
             
             let row = this._shadowRoot.getElementById("tabla").insertRow();
             
-            console.log(endcell);
+            
             let totalRows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
             let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
 
