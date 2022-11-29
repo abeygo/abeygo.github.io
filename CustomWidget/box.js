@@ -64,7 +64,7 @@ th, td {
             
         }
         newTable(arrayTable){
-            var table = this._shadowRoot.createElement("Table");
+            var table = document.createElement("Table");
             table.border = "1";
      
             //Get the count of columns.
@@ -87,7 +87,7 @@ th, td {
                 }
             
      
-            var dvTable = document.getElementById("main");
+            var dvTable = this._shadowRoot.getElementById("main");
             dvTable.innerHTML = "";
             dvTable.appendChild(table);
         }
