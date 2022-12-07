@@ -89,7 +89,7 @@ th, td {
             let csv_data = [];
             let rows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr");
             for (var i = 0; i < rows.length; i++){
-                let cols = rows.getElementsByTagName("td");
+                let cols = rows[i].querySelectorAll('td');
                 let csvrow=[];
                 for (var j = 0; j < cols.length; j++) {
                     csvrow.push(cols[j].innerHTML);
