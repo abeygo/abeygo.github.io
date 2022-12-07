@@ -99,9 +99,9 @@ th, td {
             csv_data = csv_data.join('\n');
             console.log(csv_data);
         }
-        downloadCSVFile(csv_data) {
+        downloadCSVFile() {
  
-            CSVFile = new Blob([csv_data], {
+            CSVFile = new Blob([], {
                 type: "text/csv"
             });
  
