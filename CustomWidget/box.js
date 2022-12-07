@@ -85,6 +85,25 @@ th, td {
             console.log(row);
 
         }
+        tableToCSV(){
+            let csv_data = [];
+            let rows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr");
+            for (var i = 0; i < rows.length; i++){
+                let cols = rows.getElementsByTagName("td");
+                let csvrow=[];
+                for (var j = 0; j < cols.length; j++) {
+                    csvrow.push(cols[j].innerHTML);
+                }
+                csv_data.push(csvrow.join(","));
+            }
+            csv_data = csv_data.join('\n');
+            console.log(csv_data);
+        }
+
+
+
+
+
 
     }
     customElements.define("com-sample-box", Box);
