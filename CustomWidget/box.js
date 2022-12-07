@@ -94,10 +94,28 @@ th, td {
                 for (var j = 0; j < cols.length; j++) {
                     csvrow.push(cols[j].innerHTML);
                 }
-                csv_data.push(csvrow.join(","));
+                csv_data.push(csvrow.join(";"));
             }
             csv_data = csv_data.join('\n');
             console.log(csv_data);
+        }
+        downloadCSVFile(csv_data) {
+ 
+            CSVFile = new Blob([csv_data], {
+                type: "text/csv"
+            });
+ 
+            var temp_link = this._shadowRoot.createElement('a');
+ 
+            temp_link.download = "Box.csv";
+            var url = window.URL.createObjectURL(CSVFile);
+            temp_link.href = url;
+ 
+            temp_link.style.display = "none";
+            document.body.appendChild(temp_link);
+ 
+            temp_link.click();
+            document.body.removeChild(temp_link);
         }
 
 
