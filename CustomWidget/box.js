@@ -101,7 +101,7 @@ th, td {
         }
         downloadCSVFile() {
  
-            CSVFile = new Blob([], {
+            let CSVFile = new Blob([], {
                 type: "text/csv"
             });
  
