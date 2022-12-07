@@ -105,7 +105,7 @@ th, td {
                 type: "text/csv"
             });
  
-            var temp_link = this._shadowRoot.createElement('a');
+            var temp_link = document.createElement('a');
  
             temp_link.download = "Box.csv";
             var url = window.URL.createObjectURL(CSVFile);
