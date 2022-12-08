@@ -78,7 +78,7 @@ th, td {
         setCellText(rowIndex, cellIndex, text) {
             let cell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
             cell.innerHTML = text
-            console.log(cell);
+            //console.log(cell);
         }
         numberOfRows() {
             let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
@@ -97,7 +97,7 @@ th, td {
                 csv_data.push(csvrow.join(";"));
             }
             csv_data = csv_data.join('\n');
-            console.log(csv_data);
+            //console.log(csv_data);
             let CSVFile = new Blob([csv_data], {
                 type: "text/csv"
             });
