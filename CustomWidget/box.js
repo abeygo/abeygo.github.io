@@ -52,12 +52,7 @@ th, td {
         newCell() {
             let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].insertCell();
         }
-        newHeader() {
-            let endcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[0].childNodes.length;
-            console.log(endcell);
-            let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].createElement("th");
-
-        }
+        
 
         newRow() {
 
@@ -71,20 +66,13 @@ th, td {
                 let newcell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[totalRows].insertCell();
             }
         }
-        selectRow(index) {
-            let tableRow = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[index];
-            console.log(tableRow);
-        }
+
         setCellText(rowIndex, cellIndex, text) {
             let cell = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr")[rowIndex].getElementsByTagName("td")[cellIndex];
             cell.innerHTML = text
             //console.log(cell);
         }
-        numberOfRows() {
-            let row = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr").length;
-            console.log(row);
 
-        }
         tableToCSV(){
             let csv_data = [];
             let rows = this._shadowRoot.getElementById("tabla").getElementsByTagName("tr");
@@ -114,30 +102,7 @@ th, td {
             temp_link.click();
             document.body.removeChild(temp_link);
         }
-        downloadCSVFile() {
- 
-            let CSVFile = new Blob([], {
-                type: "text/csv"
-            });
- 
-            var temp_link = document.createElement('a');
- 
-            temp_link.download = "Box.csv";
-            var url = window.URL.createObjectURL(CSVFile);
-            temp_link.href = url;
- 
-            temp_link.style.display = "none";
-            document.body.appendChild(temp_link);
- 
-            temp_link.click();
-            document.body.removeChild(temp_link);
-        }
-
-
-
-
-
-
+        
     }
     customElements.define("com-sample-box", Box);
 })();
