@@ -92,7 +92,7 @@ th, td {
  
             var temp_link = document.createElement('a');
  
-            temp_link.download = "Box.csv";
+            temp_link.download = "Export_Commentaires.csv";
             var url = window.URL.createObjectURL(CSVFile);
             temp_link.href = url;
  
